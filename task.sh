@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 USER="backup"
 PASSWORD="P@ssw0rd"
@@ -22,4 +22,4 @@ mysqldump -u $USER -p$PASSWORD --no-create-info $PROD_DB > $DATA_ONLY_FILE
 echo "Data import in $DEV_DB..."
 mysql -u $USER -p$PASSWORD $DEV_DB < $DATA_ONLY_FILE
 
-echo "All operations has been completed."
+echo "All operations have been completed."
